@@ -1,0 +1,10 @@
+flask
+langchain
+langchain-openai
+wikipedia
+python-pptx
+python-dotenv
+waitress
+
+
+

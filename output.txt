@@ -1,0 +1,5 @@
+{
+    "input": "watermelon",
+    "summary": "Watermelon (Citrullus lanatus) is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit. A scrambling and trailing vine-like plant, it is a highly cultivated fruit worldwide, with more than 1,000 varieties.",
+    "ppt_file": "powerpoints\\watermelon.pptx"
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LLM Agentic Wikipedia to PowerPoint</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 text-center">
+          <h1>LLM Agentic Wikipedia to PowerPoint</h1>
+
+          <!-- Flash Messages Section -->
+          {% with messages = get_flashed_messages(with_categories=true) %} {% if
+          messages %}
+          <ul class="flashes">
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %} {% endwith %}
+          <form method="POST" action="/search" class="mb-4 mt-4">
+            <label class="form-label fs-3" for="topic">Enter a topic:</label>
+            <input
+              class="form-control-lg mb-3"
+              type="text"
+              id="topic"
+              name="topic"
+              required
+            />
+            <button class="btn btn-success" type="submit">
+              Generate PowerPoint
+            </button>
+          </form>
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
+    </div>
+  </body>
+</html>
