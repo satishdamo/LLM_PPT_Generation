@@ -101,6 +101,9 @@ def create_ppt(content):
         body_placeholder = slide.placeholders[1]
         body_placeholder.text = chunk
 
+    # Ensure the "powerpoints" folder exists
+    os.makedirs("powerpoints", exist_ok=True)
+
     # Save the PowerPoint file in the "powerpoints" folder
     ppt_filename = os.path.join("powerpoints", f"{data['title']}.pptx")
     prs.save(ppt_filename)
