@@ -48,4 +48,4 @@ jobs:
           app-name: "llm-ppt-generation"
           slot-name: "production"
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_bab6355d3e7248c7991719c4008b4def  }}
-          images: "index.docker.io/${{ secrets.REGISTRY_USERNAME }}/llm-agentic-ppt-generation:${{ github.sha }}"
+          images: "index.docker.io/${{ secrets.REGISTRY_USERNAME }}/sat-genai-repository:${{ github.sha }}"
