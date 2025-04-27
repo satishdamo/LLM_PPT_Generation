@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: index.docker.io/llm-agentic-ppt-generation:${{ github.sha }}
+          tags: ${{ secrets.REGISTRY_USERNAME }}/sat-genai-repository:${{ github.sha }}
           file: ./Dockerfile
 
   deploy:
