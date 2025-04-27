@@ -22,7 +22,7 @@ jobs:
       - name: Log in to registry
         uses: docker/login-action@v2
         with:
-          registry: https://mcr.microsoft.com/
+          registry: https://index.docker.io/v1/
           username: ${{ secrets.REGISTRY_USERNAME}}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: mcr.microsoft.com/appsvc/staticsite:${{ github.sha }}
+          tags: index.docker.io/llm-agentic-ppt-generation:${{ github.sha }}
           file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
         with:
           app-name: "llm-ppt-generation"
           slot-name: "production"
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_6d76896e2969477391330da03cc35041 }}
-          images: "mcr.microsoft.com/${{ secrets.REGISTRY_USERNAME}}/appsvc/staticsite:${{ github.sha }}"
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_bab6355d3e7248c7991719c4008b4def  }}
+          images: "index.docker.io/${{ secrets.REGISTRY_USERNAME }}/llm-agentic-ppt-generation:${{ github.sha }}"
